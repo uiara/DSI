@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:app_med_base2023/telas/home_page.dart';
 
 class CadMedico extends StatelessWidget {
   @override
@@ -38,6 +39,13 @@ class CadMedico extends StatelessWidget {
                 ],
               ),
               SizedBox(height: 50),
+              Text(
+                'Nome Completo:',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontStyle: FontStyle.italic,
+                ),
+              ),
               Container(
                 width: 334,
                 height: 35,
@@ -60,6 +68,13 @@ class CadMedico extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 30),
+              Text(
+                'Endereço de Email:',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontStyle: FontStyle.italic,
+                ),
+              ),
               Container(
                 width: 334,
                 height: 35,
@@ -81,7 +96,15 @@ class CadMedico extends StatelessWidget {
                   ),
                 ),
               ),
+               
               SizedBox(height: 30),
+               Text(
+                'Tipo Profissional:',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontStyle: FontStyle.italic,
+                ),
+              ),
               Container(
                 width: 334,
                 height: 35,
@@ -104,6 +127,13 @@ class CadMedico extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 30),
+              Text(
+                'Hospital que trabalha:',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontStyle: FontStyle.italic,
+                ),
+              ),
               Container(
                 width: 334,
                 height: 35,
@@ -126,6 +156,13 @@ class CadMedico extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 30),
+              Text(
+                'Número CRM:',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontStyle: FontStyle.italic,
+                ),
+              ),
               Container(
                 width: 334,
                 height: 35,
@@ -148,6 +185,13 @@ class CadMedico extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 30),
+              Text(
+                'Senha:',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontStyle: FontStyle.italic,
+                ),
+              ),
               Container(
                 width: 334,
                 height: 35,
@@ -170,6 +214,13 @@ class CadMedico extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 30),
+              Text(
+                'Confirmar Senha:',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontStyle: FontStyle.italic,
+                ),
+              ),
               Container(
                 width: 334,
                 height: 35,
@@ -189,6 +240,33 @@ class CadMedico extends StatelessWidget {
                     hintStyle: TextStyle(color: Colors.white),
                     alignLabelWithHint: true,
                   ),
+                ),
+              
+              ),
+              SizedBox(height: 40),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                child: Align(
+                  alignment: Alignment.center,
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => HomePage()),
+                     );
+                    },
+                    child: Text('Cadastrar'),
+                    style: ElevatedButton.styleFrom(
+                      primary: Colors.white,
+                      onPrimary: Colors.black,
+                      side: BorderSide(color: Colors.blue, width: 3),
+                      padding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                    ),
+                  ),
+            
                 ),
               ),
             ],

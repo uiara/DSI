@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:projetoflutterdsi2023/telas/login_paciente.dart';
-import 'package:projetoflutterdsi2023/telas/login_medico.dart';
-import 'package:projetoflutterdsi2023/telas/tela_sobre.dart';
+import 'package:app_med_base2023/telas/login_paciente.dart';
+import 'package:app_med_base2023/telas/login_medico.dart';
+import 'package:app_med_base2023/telas/tela_sobre.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
