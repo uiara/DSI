@@ -9,7 +9,7 @@ class CadMedico extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.white,
         body: Padding(
-          padding: EdgeInsets.all(20.0),
+          padding: EdgeInsets.all(40.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -38,7 +38,7 @@ class CadMedico extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 50),
+              SizedBox(height: 45),
               Text(
                 'Nome Completo:',
                 style: TextStyle(
@@ -67,7 +67,7 @@ class CadMedico extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 30),
+              SizedBox(height: 16),
               Text(
                 'Endereço de Email:',
                 style: TextStyle(
@@ -97,7 +97,7 @@ class CadMedico extends StatelessWidget {
                 ),
               ),
                
-              SizedBox(height: 30),
+              SizedBox(height: 16),
                Text(
                 'Tipo Profissional:',
                 style: TextStyle(
@@ -126,7 +126,7 @@ class CadMedico extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 30),
+              SizedBox(height: 16),
               Text(
                 'Hospital que trabalha:',
                 style: TextStyle(
@@ -155,7 +155,7 @@ class CadMedico extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 30),
+              SizedBox(height: 16),
               Text(
                 'Número CRM:',
                 style: TextStyle(
@@ -184,7 +184,7 @@ class CadMedico extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 30),
+              SizedBox(height: 16),
               Text(
                 'Senha:',
                 style: TextStyle(
@@ -213,7 +213,7 @@ class CadMedico extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 30),
+              SizedBox(height: 16),
               Text(
                 'Confirmar Senha:',
                 style: TextStyle(
@@ -243,7 +243,7 @@ class CadMedico extends StatelessWidget {
                 ),
               
               ),
-              SizedBox(height: 40),
+              SizedBox(height: 80),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16),
                 child: Align(
@@ -255,14 +255,14 @@ class CadMedico extends StatelessWidget {
                         MaterialPageRoute(builder: (context) => HomePage()),
                      );
                     },
-                    child: Text('Cadastrar'),
+                    child: Text('Cadastrar', style: TextStyle(fontSize: 20)),
                     style: ElevatedButton.styleFrom(
                       primary: Colors.white,
                       onPrimary: Colors.black,
-                      side: BorderSide(color: Colors.blue, width: 3),
-                      padding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+                      side: BorderSide(color: Color(0xFF0B99FF), width: 3),
+                      padding: EdgeInsets.symmetric(horizontal: 50, vertical: 15),
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(8),
+                        borderRadius: BorderRadius.circular(18),
                       ),
                     ),
                   ),

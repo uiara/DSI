@@ -152,14 +152,14 @@ class SecondPage extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => HomePage()),
                   );
                 },
-                child: Text('Entrar'),
+                child: Text('Entrar', style: TextStyle(fontSize:20)),
                 style: ElevatedButton.styleFrom(
                   primary: Colors.white,
-                  onPrimary: Colors.blue,
+                  onPrimary: Colors.black,
                   side: BorderSide(color: Colors.blue, width: 2),
                   padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(8),
+                    borderRadius: BorderRadius.circular(14),
                   ),
                 ),
               ),
