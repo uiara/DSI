@@ -65,14 +65,15 @@ flutter:
     - images/equipe-medica 3.png
     - images/paciente 1.png
     - images/equipe-medica 2.png
-    - images/hospital1M.png
     - images/image 1.png
     - images/Group 3.png
     - images/assistencia-medica 1.png
     - images/senha 1.png
     - images/arquivomedico 1.png
     - images/texto_preencha.png
-
+    - images/hospt.png
+    - images/Sectiontexto.png
+    - images/Section.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

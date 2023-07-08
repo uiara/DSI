@@ -255,14 +255,14 @@ class CadMedico extends StatelessWidget {
                         MaterialPageRoute(builder: (context) => HomePage()),
                      );
                     },
-                    child: Text('Cadastrar', style: TextStyle(fontSize: 20)),
+                    child: Text('Cadastrar', style: TextStyle(fontSize: 22, height:1.5)),
                     style: ElevatedButton.styleFrom(
                       primary: Colors.white,
                       onPrimary: Colors.black,
                       side: BorderSide(color: Color(0xFF0B99FF), width: 3),
-                      padding: EdgeInsets.symmetric(horizontal: 50, vertical: 15),
+                      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(18),
+                        borderRadius: BorderRadius.circular(12),
                       ),
                     ),
                   ),

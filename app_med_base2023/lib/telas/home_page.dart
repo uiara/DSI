@@ -69,7 +69,7 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  padding: EdgeInsets.only(bottom: 60),
+                  padding: EdgeInsets.only(bottom: 40),
                   child: Stack(
                     children: [
                       InkWell(
@@ -101,7 +101,7 @@ class HomePage extends StatelessWidget {
               ],
             ),
             SizedBox(
-              height: 0,
+              height: 1,
             ),
             ElevatedButton(
               onPressed: () {
@@ -110,15 +110,15 @@ class HomePage extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => SobrE()),
                 );
               },
-              child: Text('Sobre'),
+              child: Text('Sobre', style: TextStyle(fontSize: 22, height:1.5)),
               style: ElevatedButton.styleFrom(
                 primary: Colors.white,
-                onPrimary: Colors.blue,
-                side: BorderSide(color: Colors.blue, width: 2),
-                elevation: 4,
-                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                onPrimary: Colors.black,
+                side: BorderSide(color: Colors.blue, width: 2.5),
+                
+                padding: EdgeInsets.symmetric(horizontal: 18, vertical: 10),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(8),
+                  borderRadius: BorderRadius.circular(12),
                 ),
               ),
             ),

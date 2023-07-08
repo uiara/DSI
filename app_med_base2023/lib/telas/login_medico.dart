@@ -15,8 +15,22 @@ class SecondPage extends StatelessWidget {
             padding: const EdgeInsets.only(top: 50, left: 16),
             child: Image.asset(
               'images/equipe-medica 2.png',
-              width: 62,
-              height: 50,
+              width: 52,
+              height: 46,
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 0.001, left: 105),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                
+                Image.asset(
+                  'images/hospt.png',
+                  width: 200,
+                  height: 120,
+                ),
+              ],
             ),
           ),
           Padding(
@@ -24,11 +38,7 @@ class SecondPage extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.asset(
-                  'images/hospital1.png',
-                  width: 136,
-                  height: 115,
-                ),
+                
                 Image.asset(
                   'images/image 1.png',
                   width: 213,
@@ -43,7 +53,7 @@ class SecondPage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(height: 40),
+                  SizedBox(height: 60),
                   Container(
                     width: 260,
                     height: 46,
@@ -57,7 +67,7 @@ class SecondPage extends StatelessWidget {
                     child: Row(
                       children: [
                         Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 10),
+                          padding: const EdgeInsets.symmetric(horizontal: 10,),
                           child: Image.asset(
                             'images/assistencia-medica 1.png',
                             width: 24,
@@ -75,10 +85,10 @@ class SecondPage extends StatelessWidget {
                               ),
                               labelText: 'Exemplo@gmail.com',
                               contentPadding:
-                                  EdgeInsets.symmetric(horizontal: 10),
+                                  EdgeInsets.symmetric(horizontal: 30),
                               labelStyle: TextStyle(
                                 color: Colors.white,
-                                fontSize: 16,
+                                fontSize: 12,
                                 height: 1.5,
                               ),
                               filled: true,
@@ -89,7 +99,7 @@ class SecondPage extends StatelessWidget {
                       ],
                     ),
                   ),
-                  SizedBox(height: 16),
+                  SizedBox(height: 35),
                   Container(
                     width: 260,
                     height: 46,
@@ -122,10 +132,10 @@ class SecondPage extends StatelessWidget {
                               ),
                               labelText: 'Exemplo1234',
                               contentPadding:
-                                  EdgeInsets.symmetric(horizontal: 35),
+                                  EdgeInsets.symmetric(horizontal: 50),
                               labelStyle: TextStyle(
                                 color: Colors.white,
-                                fontSize: 16,
+                                fontSize: 12,
                                 height: 1.5,
                               ),
                               filled: true,
@@ -140,7 +150,7 @@ class SecondPage extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 40),
+          SizedBox(height: 45),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16),
             child: Align(
@@ -152,14 +162,20 @@ class SecondPage extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => HomePage()),
                   );
                 },
-                child: Text('Entrar', style: TextStyle(fontSize:20)),
+                child: Text(
+                'Entrar',
+                style: TextStyle(
+                  fontSize: 22,
+                  height: 1.5,
+                ),
+              ),
                 style: ElevatedButton.styleFrom(
                   primary: Colors.white,
                   onPrimary: Colors.black,
-                  side: BorderSide(color: Colors.blue, width: 2),
+                  side: BorderSide(color: Colors.blue, width: 2.5),
                   padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(14),
+                    borderRadius: BorderRadius.circular(12),
                   ),
                 ),
               ),
@@ -175,7 +191,7 @@ class SecondPage extends StatelessWidget {
                 );
               },
               child: Text(
-                'Esqueci minha senha',
+                'Esqueceu a senha?',
                 style: TextStyle(
                   color: Colors.red,
                   fontSize: 12,
@@ -184,7 +200,7 @@ class SecondPage extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 160),
+          SizedBox(height: 100),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -211,7 +227,7 @@ class SecondPage extends StatelessWidget {
                   style: TextStyle(
                     color: Colors.blue,
                     fontSize: 12,
-                    height: 1.5,
+                    height: 1,
                   ),
                 ),
               ),
