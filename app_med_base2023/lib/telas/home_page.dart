@@ -47,7 +47,7 @@ class HomePage extends StatelessWidget {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => SecondPage(),
+                              builder: (context) => SouMedico(),
                             ),
                           );
                         },
@@ -77,7 +77,7 @@ class HomePage extends StatelessWidget {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => PacientePage(),
+                              builder: (context) => SouPaciente(),
                             ),
                           );
                         },

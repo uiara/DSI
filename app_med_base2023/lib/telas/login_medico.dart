@@ -3,7 +3,7 @@ import 'package:app_med_base2023/telas/home_page.dart';
 import 'package:app_med_base2023/telas/esqueceu_senha.dart';
 import 'package:app_med_base2023/telas/cadastro_medico.dart';
 
-class SecondPage extends StatelessWidget {
+class SouMedico extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
