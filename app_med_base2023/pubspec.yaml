@@ -75,6 +75,11 @@ flutter:
     - images/Sectiontexto.png
     - images/Section.png
     - images/perfil-de-usuario 1.png
+    - images/perfilM.png
+    - images/BTpacientes.png
+    - images/BTresultados.png
+    - images/BTsair.png
+   
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

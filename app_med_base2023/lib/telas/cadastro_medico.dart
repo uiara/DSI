@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:app_med_base2023/telas/home_page.dart';
+import 'package:app_med_base2023/telas/perfil_Medico.dart';
 
 class CadMedico extends StatelessWidget {
   @override
@@ -252,7 +252,7 @@ class CadMedico extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => HomePage()),
+                        MaterialPageRoute(builder: (context) => PerfilMed()),
                      );
                     },
                     child: Text('Cadastrar', style: TextStyle(fontSize: 22, height:1.5)),

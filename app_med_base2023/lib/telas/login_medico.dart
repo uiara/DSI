@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:app_med_base2023/telas/home_page.dart';
 import 'package:app_med_base2023/telas/esqueceu_senha.dart';
 import 'package:app_med_base2023/telas/cadastro_medico.dart';
+import 'package:app_med_base2023/telas/perfil_Medico.dart';
 
 class SouMedico extends StatelessWidget {
   @override
@@ -159,7 +159,7 @@ class SouMedico extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => HomePage()),
+                    MaterialPageRoute(builder: (context) => PerfilMed()),
                   );
                 },
                 child: Text(
