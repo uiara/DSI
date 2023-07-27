@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:app_med_base2023/telas/login_paciente.dart';
 import 'package:app_med_base2023/telas/login_medico.dart';
 import 'package:app_med_base2023/telas/tela_sobre.dart';
 
@@ -68,36 +67,6 @@ class HomePage extends StatelessWidget {
                     ],
                   ),
                 ),
-                Container(
-                  padding: EdgeInsets.only(bottom: 40),
-                  child: Stack(
-                    children: [
-                      InkWell(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => SouPaciente(),
-                            ),
-                          );
-                        },
-                        child: Image.asset('images/paciente 1.png'),
-                      ),
-                      Positioned(
-                        bottom: 14,
-                        right: 90,
-                        child: Text(
-                          'Sou Paciente',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
               ],
             ),
             SizedBox(
@@ -110,12 +79,11 @@ class HomePage extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => SobrE()),
                 );
               },
-              child: Text('Sobre', style: TextStyle(fontSize: 22, height:1.5)),
+              child: Text('Sobre', style: TextStyle(fontSize: 22, height: 1.5)),
               style: ElevatedButton.styleFrom(
                 primary: Colors.white,
                 onPrimary: Colors.black,
                 side: BorderSide(color: Colors.blue, width: 2.5),
-                
                 padding: EdgeInsets.symmetric(horizontal: 18, vertical: 10),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(12),
