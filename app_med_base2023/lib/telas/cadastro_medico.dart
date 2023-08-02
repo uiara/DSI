@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:app_med_base2023/telas/perfil_Medico.dart';
+import 'package:app_med_base2023/telas/login_Medico.dart';
 
 class CadMedico extends StatelessWidget {
   @override
@@ -9,7 +9,7 @@ class CadMedico extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.white,
         body: Padding(
-          padding: EdgeInsets.all(40.0),
+          padding: EdgeInsets.only(top:58, left: 30),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -17,19 +17,20 @@ class CadMedico extends StatelessWidget {
                 children: [
                   Image.asset(
                     'images/arquivomedico 1.png',
-                    width: 100,
+                    width: 80,
                     height: 100,
                   ),
                   Flexible(
                     child: Center(
                       child: Padding(
-                        padding: EdgeInsets.only(left: 10),
+                        padding: EdgeInsets.only(left: 0),
                         child: Text(
                           'Por favor preencha os campos com as informações corretas',
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
                             fontStyle: FontStyle.italic,
+                            color: Color(0xFF2c2b2b )
                           ),
                           textAlign: TextAlign.center,
                         ),
@@ -38,7 +39,7 @@ class CadMedico extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 45),
+              SizedBox(height: 40),
               Text(
                 'Nome Completo:',
                 style: TextStyle(
@@ -62,12 +63,12 @@ class CadMedico extends StatelessWidget {
                     ),
                     hintText: 'Nome Completo:',
                     contentPadding: EdgeInsets.symmetric(horizontal: 10),
-                    hintStyle: TextStyle(color: Colors.white),
+                    hintStyle: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),
                     alignLabelWithHint: true,
                   ),
                 ),
               ),
-              SizedBox(height: 16),
+              SizedBox(height: 13),
               Text(
                 'Endereço de Email:',
                 style: TextStyle(
@@ -91,13 +92,13 @@ class CadMedico extends StatelessWidget {
                     ),
                     hintText: 'Endereço de Email:',
                     contentPadding: EdgeInsets.symmetric(horizontal: 10),
-                    hintStyle: TextStyle(color: Colors.white),
+                    hintStyle: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),
                     alignLabelWithHint: true,
                   ),
                 ),
               ),
                
-              SizedBox(height: 16),
+              SizedBox(height: 13),
                Text(
                 'Tipo Profissional:',
                 style: TextStyle(
@@ -121,12 +122,12 @@ class CadMedico extends StatelessWidget {
                     ),
                     hintText: 'Tipo Profissional:',
                     contentPadding: EdgeInsets.symmetric(horizontal: 10),
-                    hintStyle: TextStyle(color: Colors.white),
+                    hintStyle: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),
                     alignLabelWithHint: true,
                   ),
                 ),
               ),
-              SizedBox(height: 16),
+              SizedBox(height: 13),
               Text(
                 'Hospital que trabalha:',
                 style: TextStyle(
@@ -150,12 +151,12 @@ class CadMedico extends StatelessWidget {
                     ),
                     hintText: 'Hospital que trabalha:',
                     contentPadding: EdgeInsets.symmetric(horizontal: 10),
-                    hintStyle: TextStyle(color: Colors.white),
+                    hintStyle: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),
                     alignLabelWithHint: true,
                   ),
                 ),
               ),
-              SizedBox(height: 16),
+              SizedBox(height: 13),
               Text(
                 'Número CRM:',
                 style: TextStyle(
@@ -179,12 +180,12 @@ class CadMedico extends StatelessWidget {
                     ),
                     hintText: 'Número CRM:',
                     contentPadding: EdgeInsets.symmetric(horizontal: 10),
-                    hintStyle: TextStyle(color: Colors.white),
+                    hintStyle: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),
                     alignLabelWithHint: true,
                   ),
                 ),
               ),
-              SizedBox(height: 16),
+              SizedBox(height: 13),
               Text(
                 'Senha:',
                 style: TextStyle(
@@ -208,12 +209,12 @@ class CadMedico extends StatelessWidget {
                     ),
                     hintText: 'Senha:',
                     contentPadding: EdgeInsets.symmetric(horizontal: 10),
-                    hintStyle: TextStyle(color: Colors.white),
+                    hintStyle: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),
                     alignLabelWithHint: true,
                   ),
                 ),
               ),
-              SizedBox(height: 16),
+              SizedBox(height: 13),
               Text(
                 'Confirmar Senha:',
                 style: TextStyle(
@@ -237,42 +238,54 @@ class CadMedico extends StatelessWidget {
                     ),
                     hintText: 'Confirmar Senha:',
                     contentPadding: EdgeInsets.symmetric(horizontal: 10),
-                    hintStyle: TextStyle(color: Colors.white),
+                    hintStyle: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),
                     alignLabelWithHint: true,
                   ),
                 ),
               
               ),
-              SizedBox(height: 80),
+              SizedBox(height: 10),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16),
-                child: Align(
-                  alignment: Alignment.center,
-                  child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => PerfilMed()),
-                     );
-                    },
-                    child: Text('Cadastrar', style: TextStyle(fontSize: 22, height:1.5)),
-                    style: ElevatedButton.styleFrom(
-                      primary: Colors.white,
-                      onPrimary: Colors.black,
-                      side: BorderSide(color: Color(0xFF0B99FF), width: 3),
-                      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12),
+                  padding: EdgeInsets.only(left: 0, right: 40),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => SouMedico()),
+                          );
+                        },
+                        child: Image.asset(
+                          'images/Bcadastrar.png',
+                          width: 30, 
+                          height: 50,
+                        ),
                       ),
-                    ),
+                      SizedBox(height: 10),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => SouMedico()),
+                          );
+                        },
+                        child: Image.asset(
+                          'images/Bvoltar4.png',
+                          width: 30, 
+                          height: 50,
+                        ),
+                      ),
+                    ],
                   ),
-            
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
-      ),
+      
     );
   }
 }
