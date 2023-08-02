@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:app_med_base2023/telas/login_paciente.dart';
 import 'package:app_med_base2023/telas/login_medico.dart';
 import 'package:app_med_base2023/telas/tela_sobre.dart';
 
@@ -16,7 +15,7 @@ class HomePage extends StatelessWidget {
             Align(
               alignment: Alignment.topRight,
               child: Padding(
-                padding: EdgeInsets.only(right: 45, top: 45),
+                padding: EdgeInsets.only(right: 45, top: 70),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -35,7 +34,7 @@ class HomePage extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 32.1),
+            SizedBox(height: 120),
             Column(
               children: [
                 Container(
@@ -54,7 +53,7 @@ class HomePage extends StatelessWidget {
                         child: Image.asset('images/equipe-medica 3.png'),
                       ),
                       Positioned(
-                        bottom: 10,
+                        bottom: 5,
                         right: 95,
                         child: Text(
                           'Sou médico',
@@ -68,40 +67,11 @@ class HomePage extends StatelessWidget {
                     ],
                   ),
                 ),
-                Container(
-                  padding: EdgeInsets.only(bottom: 40),
-                  child: Stack(
-                    children: [
-                      InkWell(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => SouPaciente(),
-                            ),
-                          );
-                        },
-                        child: Image.asset('images/paciente 1.png'),
-                      ),
-                      Positioned(
-                        bottom: 14,
-                        right: 90,
-                        child: Text(
-                          'Sou Paciente',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+                
               ],
             ),
             SizedBox(
-              height: 1,
+              height: 80,
             ),
             ElevatedButton(
               onPressed: () {

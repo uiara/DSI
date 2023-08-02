@@ -10,7 +10,7 @@ class SobrE extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding: const EdgeInsets.only(top: 60, left: 105),
+            padding: const EdgeInsets.only(top: 60, left: 92),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -23,7 +23,7 @@ class SobrE extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 0.001, left: 95),
+            padding: const EdgeInsets.only(top: 0.001, left: 87),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -36,13 +36,13 @@ class SobrE extends StatelessWidget {
             ),
           ),
           
-          SizedBox(height: 22),
+          SizedBox(height: 20),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 80),
+            padding: const EdgeInsets.symmetric(horizontal: 65),
             child: Container(
-              color: Colors.grey[800],
-              height: 480,
-              padding: EdgeInsets.all(35),
+              color: const Color.fromRGBO(66, 66, 66, 1),
+              height: 445,
+              padding: EdgeInsets.all(40),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -64,7 +64,7 @@ class SobrE extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 20),
+          SizedBox(height: 15),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16),
             child: Align(

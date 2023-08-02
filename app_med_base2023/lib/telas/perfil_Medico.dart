@@ -1,9 +1,12 @@
+
 import 'package:flutter/material.dart';
-import 'package:app_med_base2023/telas/home_page.dart';
+import 'package:app_med_base2023/telas/Home_Page.dart';
 import 'package:app_med_base2023/telas/pacientes_Medico.dart';
-import 'package:app_med_base2023/telas/resultados.dart';
+import 'package:app_med_base2023/telas/DadosBasicos_PAc.dart';
 
 class PerfilMed extends StatelessWidget {
+  const PerfilMed({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,7 +16,7 @@ class PerfilMed extends StatelessWidget {
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.only(top: 50),
+              padding: const EdgeInsets.only(top: 80),
               child: Image.asset(
                 'images/perfilM.png',
                 width: 97,
@@ -33,9 +36,8 @@ class PerfilMed extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => PacMedico(),
-                    ),
-                  );
+                  MaterialPageRoute(builder: (context) => PacMedico()),
+                );
               },
             
               child: Image.asset(
@@ -50,13 +52,13 @@ class PerfilMed extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => Result(),
+                    builder: (context) => NovoPac(),
                   ),
                 );
               },
             
               child: Image.asset(
-                'images/BTresultados.png',
+                'images/NovoPac.png',
                 width: 260,
                 height: 46,
               ),

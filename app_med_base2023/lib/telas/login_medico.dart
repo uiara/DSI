@@ -12,7 +12,7 @@ class SouMedico extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding: const EdgeInsets.only(top: 50, left: 16),
+            padding: const EdgeInsets.only(top: 70, left: 16),
             child: Image.asset(
               'images/equipe-medica 2.png',
               width: 52,
@@ -200,7 +200,7 @@ class SouMedico extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 100),
+          SizedBox(height: 30),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [

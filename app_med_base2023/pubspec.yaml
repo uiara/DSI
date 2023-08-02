@@ -30,6 +30,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  shared_preferences: ^2.0.7
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -39,6 +40,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  shared_preferences: ^2.0.8
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -79,6 +81,15 @@ flutter:
     - images/BTpacientes.png
     - images/BTresultados.png
     - images/BTsair.png
+    - images/imgResultados.png
+    - images/NovoPac.png
+    - images/paciente3g.png
+    - images/Botão_compressed.png
+    - images/sairbotao.png
+    - images/Bcadastrar.png
+    - images/Bvoltar4.png
+    - images/Botao_proximo.png
+    - images/Botao_voltar.png
    
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
