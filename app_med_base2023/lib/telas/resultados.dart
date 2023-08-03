@@ -34,7 +34,7 @@ class Result extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(height: 22),//PALAVRA RESULTADOS ABAIXO DA IMAGEM
+          SizedBox(height: 22),
           Align(
               alignment: Alignment.center,  
             child:Text(
@@ -63,7 +63,7 @@ class Result extends StatelessWidget {
               ),
             ],
           ),        
-          SizedBox(height: 70),//ajuste da altura do botão voltar
+          SizedBox(height: 70),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16),
             child: Align(
@@ -100,3 +100,6 @@ class Result extends StatelessWidget {
     );
   }
 }
+
+
+
