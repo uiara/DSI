@@ -90,6 +90,7 @@ flutter:
     - images/Bvoltar4.png
     - images/Botao_proximo.png
     - images/Botao_voltar.png
+    - images/Botao_cadastrar_novo_paciente.png
    
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
