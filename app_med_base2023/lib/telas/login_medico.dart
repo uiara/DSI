@@ -8,182 +8,52 @@ class SouMedico extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(top: 70, left: 16),
-            child: Image.asset(
+      body: SingleChildScrollView(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            SizedBox(height: 70),
+            Image.asset(
               'images/equipe-medica 2.png',
               width: 52,
               height: 46,
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(top: 0.001, left: 105),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                
-                Image.asset(
-                  'images/hospt.png',
-                  width: 200,
-                  height: 120,
-                ),
-              ],
+            SizedBox(height: 30),
+            Image.asset(
+              'images/hospt.png',
+              width: 200,
+              height: 120,
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(top: 0.001, left: 90),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                
-                Image.asset(
-                  'images/image 1.png',
-                  width: 213,
-                  height: 62,
-                ),
-              ],
+            SizedBox(height: 30),
+            Image.asset(
+              'images/image 1.png',
+              width: 213,
+              height: 62,
             ),
-          ),
-          Center(
-            child: Padding(
-              padding: const EdgeInsets.all(16),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  SizedBox(height: 60),
-                  Container(
-                    width: 260,
-                    height: 46,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      color: Colors.blue[500],
-                      boxShadow: [
-                        BoxShadow(color: Colors.transparent),
-                      ],
-                    ),
-                    child: Row(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 10,),
-                          child: Image.asset(
-                            'images/assistencia-medica 1.png',
-                            width: 24,
-                            height: 24,
-                          ),
-                        ),
-                        Expanded(
-                          child: TextField(
-                            textAlign: TextAlign.center,
-                            textAlignVertical: TextAlignVertical.center,
-                            decoration: InputDecoration(
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(20),
-                                borderSide: BorderSide.none,
-                              ),
-                              labelText: 'Exemplo@gmail.com',
-                              contentPadding:
-                                  EdgeInsets.symmetric(horizontal: 30),
-                              labelStyle: TextStyle(
-                                color: Colors.white,
-                                fontSize: 12,
-                                height: 1.5,
-                              ),
-                              filled: true,
-                              fillColor: Colors.blue[500],
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  SizedBox(height: 35),
-                  Container(
-                    width: 260,
-                    height: 46,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      color: Colors.blue[500],
-                      boxShadow: [
-                        BoxShadow(color: Colors.transparent),
-                      ],
-                    ),
-                    child: Row(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 10),
-                          child: Image.asset(
-                            'images/senha 1.png',
-                            width: 24,
-                            height: 24,
-                          ),
-                        ),
-                        Expanded(
-                          child: TextField(
-                            textAlign: TextAlign.center,
-                            textAlignVertical: TextAlignVertical.center,
-                            obscureText: true,
-                            decoration: InputDecoration(
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(20),
-                                borderSide: BorderSide.none,
-                              ),
-                              labelText: 'Exemplo1234',
-                              contentPadding:
-                                  EdgeInsets.symmetric(horizontal: 50),
-                              labelStyle: TextStyle(
-                                color: Colors.white,
-                                fontSize: 12,
-                                height: 1.5,
-                              ),
-                              filled: true,
-                              fillColor: Colors.blue[500],
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-          SizedBox(height: 45),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16),
-            child: Align(
-              alignment: Alignment.center,
-              child: ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => PerfilMed()),
-                  );
-                },
-                child: Text(
-                'Entrar',
-                style: TextStyle(
-                  fontSize: 22,
-                  height: 1.5,
-                ),
-              ),
-                style: ElevatedButton.styleFrom(
-                  primary: Colors.white,
-                  onPrimary: Colors.black,
-                  side: BorderSide(color: Colors.blue, width: 2.5),
-                  padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
-                  ),
+            SizedBox(height: 60),
+            EmailTextField(),
+            SizedBox(height: 20),
+            PasswordTextField(),
+            SizedBox(height: 45),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => PerfilMed()),
+                );
+              },
+              child: Text('Entrar'),
+              style: ElevatedButton.styleFrom(
+                primary: Colors.blue,
+                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12),
                 ),
               ),
             ),
-          ),
-          SizedBox(height: 8),
-          Center(
-            child: TextButton(
+            SizedBox(height: 8),
+            TextButton(
               onPressed: () {
                 Navigator.push(
                   context,
@@ -195,43 +65,129 @@ class SouMedico extends StatelessWidget {
                 style: TextStyle(
                   color: Colors.red,
                   fontSize: 12,
-                  height: 1.5,
                 ),
               ),
             ),
-          ),
-          SizedBox(height: 30),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              TextButton(
-                onPressed: () {},
-                child: Text(
+            SizedBox(height: 30),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
                   'Não possui cadastro? ',
                   style: TextStyle(
-                    color: Colors.black,
                     fontSize: 12,
-                    height: 1.5,
                   ),
                 ),
-              ),
-              TextButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => CadMedico()),
-                  );
-                },
-                child: Text(
-                  'Cadastre-se',
-                  style: TextStyle(
-                    color: Colors.blue,
-                    fontSize: 12,
-                    height: 1,
+                TextButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => CadMedico()),
+                    );
+                  },
+                  child: Text(
+                    'Cadastre-se',
+                    style: TextStyle(
+                      color: Colors.blue,
+                      fontSize: 12,
+                    ),
                   ),
                 ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class EmailTextField extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 260,
+      height: 46,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(20),
+        color: Colors.blue[500],
+      ),
+      child: Row(
+        children: [
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10),
+            child: Image.asset(
+              'images/assistencia-medica 1.png',
+              width: 24,
+              height: 24,
+            ),
+          ),
+          Expanded(
+            child: TextField(
+              textAlign: TextAlign.center,
+              textAlignVertical: TextAlignVertical.center,
+              decoration: InputDecoration(
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(20),
+                  borderSide: BorderSide.none,
+                ),
+                labelText: 'Exemplo@gmail.com',
+                contentPadding: EdgeInsets.symmetric(horizontal: 30),
+                labelStyle: TextStyle(
+                  color: Colors.white,
+                  fontSize: 12,
+                ),
+                filled: true,
+                fillColor: Colors.blue[500],
               ),
-            ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class PasswordTextField extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 260,
+      height: 46,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(20),
+        color: Colors.blue[500],
+      ),
+      child: Row(
+        children: [
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10),
+            child: Image.asset(
+              'images/senha 1.png',
+              width: 24,
+              height: 24,
+            ),
+          ),
+          Expanded(
+            child: TextField(
+              textAlign: TextAlign.center,
+              textAlignVertical: TextAlignVertical.center,
+              obscureText: true,
+              decoration: InputDecoration(
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(20),
+                  borderSide: BorderSide.none,
+                ),
+                labelText: 'Exemplo1234',
+                contentPadding: EdgeInsets.symmetric(horizontal: 50),
+                labelStyle: TextStyle(
+                  color: Colors.white,
+                  fontSize: 12,
+                ),
+                filled: true,
+                fillColor: Colors.blue[500],
+              ),
+            ),
           ),
         ],
       ),
