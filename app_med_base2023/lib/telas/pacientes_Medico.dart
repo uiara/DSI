@@ -33,6 +33,10 @@ class PatientListScreen extends StatelessWidget {
     Patient('carlos', 30, 1.75, 'images/paciente 1.png'),
     Patient('bruno', 25, 1.60, 'images/paciente 1.png'),
     Patient('marcia', 40, 1.80, 'images/paciente 1.png'),
+    Patient('andré', 40, 1.80, 'images/paciente 1.png'),
+    Patient('cláudia', 30, 1.75, 'images/paciente 1.png'),
+    Patient('flavio', 25, 1.60, 'images/paciente 1.png'),
+    Patient('alan', 40, 1.80, 'images/paciente 1.png'),
   ];
 
   @override
@@ -160,9 +164,9 @@ class PatientListScreen extends StatelessWidget {
                       },
                       child: Padding(
                         padding:
-                            const EdgeInsets.only(left: 15), // Ajuste de espaço
+                            const EdgeInsets.only(left: 15), 
                         child: Image.asset(
-                          'images/Botao_cadastrar_novo_paciente.png', // Substitua pelo caminho da sua imagem
+                          'images/Botao_cadastrar_novo_paciente.png', 
                           width: 270,
                           height: 57,
                         ),
