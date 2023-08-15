@@ -11,9 +11,9 @@ class _EsqueceuSenhaState extends State<EsqueceuSenha> {
 
   void _enviarEmail() {
     if (_formKey.currentState!.validate()) {
-      // Adicione aqui a lógica para enviar um e-mail de recuperação de senha
+      
       final email = _emailController.text;
-      // Exibir uma mensagem ou fazer outra ação
+      
     }
   }
 
