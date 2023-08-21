@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "165903390131",
+    "project_id": "bfla2023-67468",
+    "storage_bucket": "bfla2023-67468.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:165903390131:android:6a59a58fd5f5e34b69a7c6",
+        "android_client_info": {
+          "package_name": "com.bfla.medbase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "165903390131-6snbn1sgb0k4ajl42a5aiqkbu7llt24j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbuoFS4YS89_OEo59VzN3E0cNXDYMlMC4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "165903390131-6snbn1sgb0k4ajl42a5aiqkbu7llt24j.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "165903390131-q4oe0u36i6ompupd09pecuathvrljlno.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "firebase.bfla"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:165903390131:android:e73e22c0b1a3520769a7c6",
+        "android_client_info": {
+          "package_name": "com.example.app_med_base2023"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "165903390131-6snbn1sgb0k4ajl42a5aiqkbu7llt24j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbuoFS4YS89_OEo59VzN3E0cNXDYMlMC4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "165903390131-6snbn1sgb0k4ajl42a5aiqkbu7llt24j.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "165903390131-q4oe0u36i6ompupd09pecuathvrljlno.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "firebase.bfla"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
