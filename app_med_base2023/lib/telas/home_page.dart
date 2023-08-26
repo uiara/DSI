@@ -7,67 +7,61 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Scaffold(
-        backgroundColor: Colors.white,
-        body: Column(
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: SingleChildScrollView(
+        child: Column(
           children: [
-            Align(
+            Container(
+              padding: EdgeInsets.only(right: 45, top: 70),
               alignment: Alignment.topRight,
-              child: Padding(
-                padding: EdgeInsets.only(right: 45, top: 70),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    InkWell(
-                      child: Container(
-                        child: Image.asset('images/hospital1.png'),
-                      ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  InkWell(
+                    child: Container(
+                      child: Image.asset('images/hospital1.png'),
                     ),
-                    SizedBox(width: 8),
-                    InkWell(
-                      child: Container(
-                        child: Image.asset('images/image 1.png'),
-                      ),
+                  ),
+                  SizedBox(width: 8),
+                  InkWell(
+                    child: Container(
+                      child: Image.asset('images/image 1.png'),
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
             SizedBox(height: 120),
-            Column(
-              children: [
-                Container(
-                  padding: EdgeInsets.only(bottom: 50),
-                  child: Stack(
-                    children: [
-                      InkWell(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => SouMedico(),
-                            ),
-                          );
-                        },
-                        child: Image.asset('images/equipe-medica 3.png'),
-                      ),
-                      Positioned(
-                        bottom: 5,
-                        right: 95,
-                        child: Text(
-                          'Sou médico',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                          ),
+            Container(
+              padding: EdgeInsets.only(bottom: 50),
+              child: Stack(
+                children: [
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => SouMedico(),
                         ),
-                      ),
-                    ],
+                      );
+                    },
+                    child: Image.asset('images/equipe-medica 3.png'),
                   ),
-                ),
-              ],
+                  Positioned(
+                    bottom: 5,
+                    right: 95,
+                    child: Text(
+                      'Sou médico',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
             SizedBox(
               height: 80,

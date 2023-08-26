@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:app_med_base2023/telas/login_Medico.dart';
 
 void main() {
@@ -46,26 +48,20 @@ class _CadMedicoState extends State<CadMedico> {
                   SizedBox(height: 40),
                   _centeredTextField(
                       controller: _fullNameController, label: 'Nome Completo'),
-                  SizedBox(height: 13),
                   _centeredTextField(
                       controller: _emailController, label: 'Endereço de Email'),
-                  SizedBox(height: 13),
                   _centeredTextField(
                       controller: _professionalTypeController,
                       label: 'Tipo Profissional'),
-                  SizedBox(height: 13),
                   _centeredTextField(
                       controller: _hospitalController,
                       label: 'Hospital que trabalha'),
-                  SizedBox(height: 13),
                   _centeredTextField(
                       controller: _crmController, label: 'Número CRM'),
-                  SizedBox(height: 13),
                   _centeredTextField(
                       controller: _passwordController,
                       label: 'Senha',
                       isPassword: true),
-                  SizedBox(height: 13),
                   _centeredTextField(
                       controller: _confirmPasswordController,
                       label: 'Confirmar Senha',
@@ -76,28 +72,35 @@ class _CadMedicoState extends State<CadMedico> {
                     children: [
                       _CustomButton(
                         imagePath: 'images/Bcadastrar.png',
-                        onTap: () {
-                          bool anyFieldEmpty = false;
-                          if (_fullNameController.text.isEmpty ||
-                              _emailController.text.isEmpty ||
-                              _professionalTypeController.text.isEmpty ||
-                              _hospitalController.text.isEmpty ||
-                              _crmController.text.isEmpty ||
-                              _passwordController.text.isEmpty ||
-                              _confirmPasswordController.text.isEmpty) {
-                            anyFieldEmpty = true;
-                          }
+                        onTap: () async {
+                          if (_passwordController.text ==
+                              _confirmPasswordController.text) {
+                            try {
+                              UserCredential userCredential = await FirebaseAuth
+                                  .instance
+                                  .createUserWithEmailAndPassword(
+                                email: _emailController.text,
+                                password: _passwordController.text,
+                              );
 
-                          if (anyFieldEmpty) {
-                            setState(() {
-                              showErrorText = true;
-                            });
+                              await FirebaseFirestore.instance
+                                  .collection('users')
+                                  .doc(userCredential.user!.uid)
+                                  .set({
+                                'full_name': _fullNameController.text,
+                                'email': _emailController.text,
+                                'professional_type':
+                                    _professionalTypeController.text,
+                                'hospital': _hospitalController.text,
+                                'crm': _crmController.text,
+                              });
+
+                              print("Cadastro realizado com sucesso!");
+                            } on FirebaseAuthException catch (e) {
+                              print("Erro durante o cadastro: ${e.message}");
+                            }
                           } else {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => SouMedico()),
-                            );
+                            print("As senhas não coincidem.");
                           }
                         },
                       ),
