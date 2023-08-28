@@ -11,7 +11,7 @@ class CadastroPaciente extends StatelessWidget {
       appBar: AppBar(
         title: Text('Cadastro de Novo Paciente'),
       ),
-      body: Padding(
+      body: SingleChildScrollView(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -42,7 +42,11 @@ class CadastroPaciente extends StatelessWidget {
                 final idade = int.tryParse(idadeController.text) ?? 0;
                 final altura = double.tryParse(alturaController.text) ?? 0;
 
-                final novoPaciente = {'nome': nome, 'idade': idade, 'altura': altura};
+                final novoPaciente = {
+                  'nome': nome,
+                  'idade': idade,
+                  'altura': altura
+                };
 
                 Navigator.pop(context, novoPaciente);
               },

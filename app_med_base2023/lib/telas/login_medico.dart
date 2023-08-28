@@ -1,9 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:app_med_base2023/telas/esqueceu_senha.dart';
 import 'package:app_med_base2023/telas/cadastro_medico.dart';
 import 'package:app_med_base2023/telas/perfil_Medico.dart';
 
-class SouMedico extends StatelessWidget {
+void main() {
+  runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
+    home: SouMedico(),
+  ));
+}
+
+class SouMedico extends StatefulWidget {
+  @override
+  _SouMedicoState createState() => _SouMedicoState();
+}
+
+class _SouMedicoState extends State<SouMedico> {
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+
+  FirebaseAuth _auth = FirebaseAuth.instance;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,16 +50,26 @@ class SouMedico extends StatelessWidget {
               height: 62,
             ),
             SizedBox(height: 60),
-            EmailTextField(),
+            EmailTextField(controller: _emailController),
             SizedBox(height: 20),
-            PasswordTextField(),
+            PasswordTextField(controller: _passwordController),
             SizedBox(height: 45),
             ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => PerfilMed()),
-                );
+              onPressed: () async {
+                try {
+                  UserCredential userCredential =
+                      await _auth.signInWithEmailAndPassword(
+                    email: _emailController.text,
+                    password: _passwordController.text,
+                  );
+
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => PerfilMed()),
+                  );
+                } on FirebaseAuthException catch (e) {
+                  print("Erro durante o login: ${e.message}");
+                }
               },
               child: Text('Entrar'),
               style: ElevatedButton.styleFrom(
@@ -103,6 +131,10 @@ class SouMedico extends StatelessWidget {
 }
 
 class EmailTextField extends StatelessWidget {
+  final TextEditingController controller;
+
+  const EmailTextField({required this.controller});
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -124,6 +156,7 @@ class EmailTextField extends StatelessWidget {
           ),
           Expanded(
             child: TextField(
+              controller: controller,
               textAlign: TextAlign.center,
               textAlignVertical: TextAlignVertical.center,
               decoration: InputDecoration(
@@ -149,6 +182,10 @@ class EmailTextField extends StatelessWidget {
 }
 
 class PasswordTextField extends StatelessWidget {
+  final TextEditingController controller;
+
+  const PasswordTextField({required this.controller});
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -170,6 +207,7 @@ class PasswordTextField extends StatelessWidget {
           ),
           Expanded(
             child: TextField(
+              controller: controller,
               textAlign: TextAlign.center,
               textAlignVertical: TextAlignVertical.center,
               obscureText: true,
