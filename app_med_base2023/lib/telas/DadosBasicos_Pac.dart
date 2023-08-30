@@ -1,8 +1,48 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:app_med_base2023/telas/perfil_Medico.dart';
 import 'package:app_med_base2023/telas/TelaDados_doPaciente.dart';
 
-class NovoPac extends StatelessWidget {
+class NovoPac extends StatefulWidget {
+  @override
+  _NovoPacState createState() => _NovoPacState();
+}
+
+class _NovoPacState extends State<NovoPac> {
+  TextEditingController _nomeController = TextEditingController();
+  TextEditingController _idadeController = TextEditingController();
+  TextEditingController _alturaController = TextEditingController();
+
+  FirebaseAuth _auth = FirebaseAuth.instance;
+  FirebaseFirestore _firestore = FirebaseFirestore.instance;
+
+  void _salvarDadosPaciente() async {
+    User? user = _auth.currentUser;
+    if (user != null) {
+      try {
+        DocumentReference pacienteRef = await _firestore
+            .collection('users')
+            .doc(user.uid)
+            .collection('pacientes')
+            .add({
+          'nome': _nomeController.text,
+          'idade': int.tryParse(_idadeController.text) ?? 0,
+          'altura': double.tryParse(_alturaController.text) ?? 0.0,
+        });
+
+        print('Paciente salvo com ID: ${pacienteRef.id}');
+
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => DadosP()),
+        );
+      } catch (e) {
+        print('Erro ao salvar dados do paciente: $e');
+      }
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -78,6 +118,7 @@ class NovoPac extends StatelessWidget {
                                 borderSide: BorderSide.none,
                               ),
                             ),
+                            controller: _nomeController,
                           ),
                         ),
                       ),
@@ -116,6 +157,7 @@ class NovoPac extends StatelessWidget {
                                 borderSide: BorderSide.none,
                               ),
                             ),
+                            controller: _idadeController,
                           ),
                         ),
                       ),
@@ -154,6 +196,7 @@ class NovoPac extends StatelessWidget {
                                 borderSide: BorderSide.none,
                               ),
                             ),
+                            controller: _alturaController,
                           ),
                         ),
                       ),
@@ -186,10 +229,7 @@ class NovoPac extends StatelessWidget {
                 SizedBox(width: 20),
                 GestureDetector(
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => DadosP()),
-                    );
+                    _salvarDadosPaciente();
                   },
                   child: Container(
                     child: Padding(

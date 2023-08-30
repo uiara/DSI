@@ -19,6 +19,7 @@ class SouMedico extends StatefulWidget {
 class _SouMedicoState extends State<SouMedico> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+  String? _loginErrorMessage;
 
   FirebaseAuth _auth = FirebaseAuth.instance;
 
@@ -50,6 +51,13 @@ class _SouMedicoState extends State<SouMedico> {
               height: 62,
             ),
             SizedBox(height: 60),
+            if (_loginErrorMessage != null)
+              Text(
+                _loginErrorMessage!,
+                style: TextStyle(
+                  color: Colors.red,
+                ),
+              ),
             EmailTextField(controller: _emailController),
             SizedBox(height: 20),
             PasswordTextField(controller: _passwordController),
@@ -63,11 +71,18 @@ class _SouMedicoState extends State<SouMedico> {
                     password: _passwordController.text,
                   );
 
+                  setState(() {
+                    _loginErrorMessage = null;
+                  });
+
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => PerfilMed()),
                   );
                 } on FirebaseAuthException catch (e) {
+                  setState(() {
+                    _loginErrorMessage = "Senha ou email incorreto";
+                  });
                   print("Erro durante o login: ${e.message}");
                 }
               },
@@ -164,7 +179,7 @@ class EmailTextField extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20),
                   borderSide: BorderSide.none,
                 ),
-                labelText: 'Exemplo@gmail.com',
+                labelText: 'Insira o seu Email',
                 contentPadding: EdgeInsets.symmetric(horizontal: 30),
                 labelStyle: TextStyle(
                   color: Colors.white,
@@ -216,7 +231,7 @@ class PasswordTextField extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20),
                   borderSide: BorderSide.none,
                 ),
-                labelText: 'Exemplo1234',
+                labelText: ' Insira a sua Senha ',
                 contentPadding: EdgeInsets.symmetric(horizontal: 50),
                 labelStyle: TextStyle(
                   color: Colors.white,
