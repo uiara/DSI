@@ -83,9 +83,11 @@ class _CadMedicoState extends State<CadMedico> {
                                 password: _passwordController.text,
                               );
 
+                              String userId = userCredential.user!.uid;
+
                               await FirebaseFirestore.instance
                                   .collection('users')
-                                  .doc(userCredential.user!.uid)
+                                  .doc(userId)
                                   .set({
                                 'full_name': _fullNameController.text,
                                 'email': _emailController.text,
@@ -96,8 +98,8 @@ class _CadMedicoState extends State<CadMedico> {
                               });
 
                               print("Cadastro realizado com sucesso!");
-                            } on FirebaseAuthException catch (e) {
-                              print("Erro durante o cadastro: ${e.message}");
+                            } catch (e) {
+                              print("Erro durante o cadastro: $e");
                             }
                           } else {
                             print("As senhas não coincidem.");
