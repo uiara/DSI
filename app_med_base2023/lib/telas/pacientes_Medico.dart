@@ -163,10 +163,9 @@ class PatientListScreen extends StatelessWidget {
                         );
                       },
                       child: Padding(
-                        padding:
-                            const EdgeInsets.only(left: 15), 
+                        padding: const EdgeInsets.only(left: 15),
                         child: Image.asset(
-                          'images/Botao_cadastrar_novo_paciente.png', 
+                          'images/Botao_cadastrar_novo_paciente.png',
                           width: 270,
                           height: 57,
                         ),
