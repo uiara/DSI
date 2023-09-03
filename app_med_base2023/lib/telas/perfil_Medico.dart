@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:app_med_base2023/telas/Home_Page.dart';
 import 'package:app_med_base2023/telas/pacientes_Medico.dart';
@@ -25,9 +24,9 @@ class PerfilMed extends StatelessWidget {
             ),
             SizedBox(height: 0),
             Text(
-              'Teste de José de Melo',
+              'Home',
               style: TextStyle(
-                fontSize: 16,
+                fontSize: 20,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -39,7 +38,6 @@ class PerfilMed extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => PacMedico()),
                 );
               },
-            
               child: Image.asset(
                 'images/BTpacientes.png',
                 width: 260,
@@ -56,7 +54,6 @@ class PerfilMed extends StatelessWidget {
                   ),
                 );
               },
-            
               child: Image.asset(
                 'images/NovoPac.png',
                 width: 260,
@@ -73,7 +70,6 @@ class PerfilMed extends StatelessWidget {
                   ),
                 );
               },
-              
               child: Image.asset(
                 'images/BTsair.png',
                 width: 260,

@@ -157,7 +157,7 @@ class EmailTextField extends StatelessWidget {
       height: 46,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
-        color: Colors.blue[500],
+        color: Colors.blue.shade200,
       ),
       child: Row(
         children: [
@@ -179,14 +179,14 @@ class EmailTextField extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20),
                   borderSide: BorderSide.none,
                 ),
-                labelText: 'Insira o seu Email',
+                labelText: '       Insira o seu Email',
                 contentPadding: EdgeInsets.symmetric(horizontal: 30),
                 labelStyle: TextStyle(
-                  color: Colors.white,
+                  color: Colors.black,
                   fontSize: 12,
                 ),
                 filled: true,
-                fillColor: Colors.blue[500],
+                fillColor: Colors.blue.shade200,
               ),
             ),
           ),
@@ -208,7 +208,7 @@ class PasswordTextField extends StatelessWidget {
       height: 46,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
-        color: Colors.blue[500],
+        color: Colors.blue.shade200,
       ),
       child: Row(
         children: [
@@ -231,14 +231,14 @@ class PasswordTextField extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20),
                   borderSide: BorderSide.none,
                 ),
-                labelText: ' Insira a sua Senha ',
+                labelText: 'Insira a sua Senha',
                 contentPadding: EdgeInsets.symmetric(horizontal: 50),
                 labelStyle: TextStyle(
-                  color: Colors.white,
+                  color: Colors.black,
                   fontSize: 12,
                 ),
                 filled: true,
-                fillColor: Colors.blue[500],
+                fillColor: Colors.blue.shade200,
               ),
             ),
           ),

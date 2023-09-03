@@ -46,13 +46,15 @@ class PatientListScreen extends StatelessWidget {
                         onTap: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => PerfilMed()),
+                            MaterialPageRoute(
+                                builder: (context) => PerfilMed()),
                           );
                         },
                         child: Column(
                           children: [
                             Padding(
-                              padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
+                              padding: const EdgeInsets.symmetric(
+                                  vertical: 8.0, horizontal: 16.0),
                               child: Row(
                                 children: [
                                   Container(
@@ -69,21 +71,34 @@ class PatientListScreen extends StatelessWidget {
                                   SizedBox(width: 25),
                                   Expanded(
                                     child: Column(
-                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
                                       children: [
                                         Text(
                                           'Nome: ${patient.nome}',
-                                          style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black, fontSize: 20, fontStyle: FontStyle.italic),
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                              color: Colors.black,
+                                              fontSize: 20,
+                                              fontStyle: FontStyle.italic),
                                         ),
                                         SizedBox(height: 8),
                                         Text(
                                           'Idade: ${patient.idade}',
-                                          style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black, fontSize: 20, fontStyle: FontStyle.italic),
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                              color: Colors.black,
+                                              fontSize: 20,
+                                              fontStyle: FontStyle.italic),
                                         ),
                                         SizedBox(height: 8),
                                         Text(
                                           'Altura: ${patient.altura.toStringAsFixed(2)}',
-                                          style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black, fontSize: 20, fontStyle: FontStyle.italic),
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                              color: Colors.black,
+                                              fontSize: 20,
+                                              fontStyle: FontStyle.italic),
                                         ),
                                       ],
                                     ),
@@ -124,7 +139,8 @@ class PatientListScreen extends StatelessWidget {
                         ),
                         hintText: '',
                         contentPadding: EdgeInsets.symmetric(horizontal: 10),
-                        hintStyle: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+                        hintStyle: TextStyle(
+                            color: Colors.white, fontWeight: FontWeight.bold),
                         alignLabelWithHint: true,
                       ),
                     ),
@@ -155,7 +171,8 @@ class PatientListScreen extends StatelessWidget {
                         ),
                         hintText: '',
                         contentPadding: EdgeInsets.symmetric(horizontal: 10),
-                        hintStyle: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+                        hintStyle: TextStyle(
+                            color: Colors.white, fontWeight: FontWeight.bold),
                         alignLabelWithHint: true,
                       ),
                     ),
@@ -186,7 +203,8 @@ class PatientListScreen extends StatelessWidget {
                         ),
                         hintText: '',
                         contentPadding: EdgeInsets.symmetric(horizontal: 10),
-                        hintStyle: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+                        hintStyle: TextStyle(
+                            color: Colors.white, fontWeight: FontWeight.bold),
                         alignLabelWithHint: true,
                       ),
                     ),
@@ -217,7 +235,8 @@ class PatientListScreen extends StatelessWidget {
                         ),
                         hintText: '',
                         contentPadding: EdgeInsets.symmetric(horizontal: 10),
-                        hintStyle: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+                        hintStyle: TextStyle(
+                            color: Colors.white, fontWeight: FontWeight.bold),
                         alignLabelWithHint: true,
                       ),
                     ),
@@ -248,7 +267,8 @@ class PatientListScreen extends StatelessWidget {
                         ),
                         hintText: '',
                         contentPadding: EdgeInsets.symmetric(horizontal: 10),
-                        hintStyle: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+                        hintStyle: TextStyle(
+                            color: Colors.white, fontWeight: FontWeight.bold),
                         alignLabelWithHint: true,
                       ),
                     ),
@@ -281,7 +301,8 @@ class PatientListScreen extends StatelessWidget {
                         ),
                         hintText: '',
                         contentPadding: EdgeInsets.symmetric(horizontal: 10),
-                        hintStyle: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+                        hintStyle: TextStyle(
+                            color: Colors.white, fontWeight: FontWeight.bold),
                         alignLabelWithHint: true,
                       ),
                     ),
@@ -325,8 +346,10 @@ class PatientListScreen extends StatelessWidget {
                       },
                       child: Text(
                         '"Resultados desse paciente"',
-                        
-                        style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontStyle: FontStyle.italic),
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold,
+                            fontStyle: FontStyle.italic),
                       ),
                     ),
                   )

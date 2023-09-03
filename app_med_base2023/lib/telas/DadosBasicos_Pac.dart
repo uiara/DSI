@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:app_med_base2023/telas/perfil_Medico.dart';
-import 'package:app_med_base2023/telas/TelaDados_doPaciente.dart';
+import 'package:app_med_base2023/telas/TelaDados_doPaciente.dart'; // Importe a tela de dados complexos
 
 class NovoPac extends StatefulWidget {
   @override
@@ -33,9 +33,13 @@ class _NovoPacState extends State<NovoPac> {
 
         print('Paciente salvo com ID: ${pacienteRef.id}');
 
+        // Após salvar os dados básicos, navegue para a tela de dados complexos
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => DadosP()),
+          MaterialPageRoute(
+            builder: (context) =>
+                DadosP(pacienteId: pacienteRef.id), // Passe o pacienteId aqui
+          ),
         );
       } catch (e) {
         print('Erro ao salvar dados do paciente: $e');
@@ -104,13 +108,13 @@ class _NovoPacState extends State<NovoPac> {
                           height: 38,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
-                            color: Colors.blue[500],
+                            color: Colors.blue.shade200,
                           ),
                           child: TextField(
                             textAlign: TextAlign.center,
                             style: TextStyle(
                                 fontSize: 16,
-                                color: Colors.white,
+                                color: Colors.black,
                                 fontWeight: FontWeight.bold),
                             decoration: InputDecoration(
                               border: OutlineInputBorder(
@@ -142,13 +146,13 @@ class _NovoPacState extends State<NovoPac> {
                           height: 38,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
-                            color: Colors.blue[500],
+                            color: Colors.blue.shade200,
                           ),
                           child: TextField(
                             textAlign: TextAlign.center,
                             style: TextStyle(
                                 fontSize: 22,
-                                color: Colors.white,
+                                color: Colors.black,
                                 fontWeight: FontWeight.bold),
                             keyboardType: TextInputType.number,
                             decoration: InputDecoration(
@@ -181,13 +185,13 @@ class _NovoPacState extends State<NovoPac> {
                           height: 38,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
-                            color: Colors.blue[500],
+                            color: Colors.blue.shade200,
                           ),
                           child: TextField(
                             textAlign: TextAlign.center,
                             style: TextStyle(
                                 fontSize: 22,
-                                color: Colors.white,
+                                color: Colors.black,
                                 fontWeight: FontWeight.bold),
                             keyboardType: TextInputType.number,
                             decoration: InputDecoration(

@@ -185,7 +185,7 @@ class _centeredTextField extends StatelessWidget {
           height: 35,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(25),
-            color: Color(0xFF0B99FF),
+            color: Colors.blue.shade200,
           ),
           child: TextField(
             controller: controller,
