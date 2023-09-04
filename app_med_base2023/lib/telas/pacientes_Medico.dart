@@ -91,7 +91,13 @@ class _PatientListScreenState extends State<PatientListScreen> {
                         onTap: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => PerfPac()),
+                            MaterialPageRoute(
+                              builder: (context) => PerfPac(pacienteData: {
+                                'nome': patient.nome,
+                                'idade': patient.idade,
+                                'altura': patient.altura,
+                              }),
+                            ),
                           );
                         },
                         child: Column(
