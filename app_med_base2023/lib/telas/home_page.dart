@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:app_med_base2023/telas/login_medico.dart';
 import 'package:app_med_base2023/telas/tela_sobre.dart';
+import 'package:app_med_base2023/main_first_app.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -83,6 +84,15 @@ class HomePage extends StatelessWidget {
                   borderRadius: BorderRadius.circular(12),
                 ),
               ),
+            ),
+            SizedBox(height: 20), // Espaço para separar o botão abaixo.
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => MainPage(title: ''),
+                ));
+              },
+              child: Text('Quero apenas registrar uma consulta'),
             ),
           ],
         ),

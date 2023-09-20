@@ -193,10 +193,9 @@ class _PatientListScreenState extends State<PatientListScreen> {
                                           : (patient.saturacaoOxigenio >= 93 &&
                                                   patient.saturacaoOxigenio <=
                                                       105)
-                                              ? Colors.blue
+                                              ? Colors.green
                                               : Colors.orange
-                                      : Colors
-                                          .black, // Cor padrão se o valor for nulo
+                                      : Colors.black,
                                   fontSize: 16,
                                   fontStyle: FontStyle.italic,
                                 ),
@@ -211,10 +210,9 @@ class _PatientListScreenState extends State<PatientListScreen> {
                                           : (patient.frequenciaCardiaca >= 60 &&
                                                   patient.frequenciaCardiaca <=
                                                       100)
-                                              ? Colors.blue
+                                              ? Colors.green
                                               : Colors.orange
-                                      : Colors
-                                          .black, // Cor padrão se o valor for nulo
+                                      : Colors.black,
                                   fontSize: 16,
                                   fontStyle: FontStyle.italic,
                                 ),
@@ -231,10 +229,9 @@ class _PatientListScreenState extends State<PatientListScreen> {
                                                       140 &&
                                                   patient.maiorConcentracaoGlicose <=
                                                       180)
-                                              ? Colors.blue
+                                              ? Colors.green
                                               : Colors.orange
-                                      : Colors
-                                          .black, // Cor padrão se o valor for nulo
+                                      : Colors.black,
                                   fontSize: 16,
                                   fontStyle: FontStyle.italic,
                                 ),
@@ -251,10 +248,9 @@ class _PatientListScreenState extends State<PatientListScreen> {
                                                       70 &&
                                                   patient.menorConcentracaoGlicose <=
                                                       100)
-                                              ? Colors.blue
+                                              ? Colors.green
                                               : Colors.orange
-                                      : Colors
-                                          .black, // Cor padrão se o valor for nulo
+                                      : Colors.black,
                                   fontSize: 16,
                                   fontStyle: FontStyle.italic,
                                 ),
@@ -263,7 +259,7 @@ class _PatientListScreenState extends State<PatientListScreen> {
                                 'Notas: ${patient.notasPaciente}',
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
-                                  color: Colors.black, // Cor para as notas
+                                  color: Colors.black,
                                   fontSize: 16,
                                   fontStyle: FontStyle.italic,
                                 ),
