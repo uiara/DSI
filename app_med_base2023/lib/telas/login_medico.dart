@@ -27,6 +27,11 @@ class _SouMedicoState extends State<SouMedico> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+      appBar: AppBar(
+        title: Text('Título da Página'), // Insira o título apropriado aqui
+        automaticallyImplyLeading:
+            true, // Adiciona o botão de voltar automaticamente
+      ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16),
         child: Column(

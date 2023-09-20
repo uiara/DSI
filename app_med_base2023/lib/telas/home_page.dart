@@ -67,24 +67,7 @@ class HomePage extends StatelessWidget {
             SizedBox(
               height: 80,
             ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => SobrE()),
-                );
-              },
-              child: Text('Sobre', style: TextStyle(fontSize: 22, height: 1.5)),
-              style: ElevatedButton.styleFrom(
-                primary: Colors.white,
-                onPrimary: Colors.black,
-                side: BorderSide(color: Colors.blue, width: 2.5),
-                padding: EdgeInsets.symmetric(horizontal: 18, vertical: 10),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12),
-                ),
-              ),
-            ),
+
             SizedBox(height: 20), // Espaço para separar o botão abaixo.
             ElevatedButton(
               onPressed: () {

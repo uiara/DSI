@@ -2,6 +2,7 @@ import 'package:app_med_base2023/firebase_options_second_app.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:app_med_base2023/app_widget.dart';
+//essa é a aplicação principal do MEDBASE, começe por aqui.
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
